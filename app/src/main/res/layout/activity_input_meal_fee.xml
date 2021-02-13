@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputMealFeeActivity">
+
+    <TextView
+        android:id="@+id/budgetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/budget_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fee500Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee500ButtonClick"
+        android:text="@string/button_500"
+        app:layout_constraintBottom_toTopOf="@+id/fee2000Button"
+        app:layout_constraintEnd_toStartOf="@+id/fee1000Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetText" />
+
+    <Button
+        android:id="@+id/fee1000Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee1000ButtonClick"
+        android:text="@string/button_1000"
+        app:layout_constraintBottom_toTopOf="@+id/fee3000Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fee500Button"
+        app:layout_constraintTop_toBottomOf="@+id/budgetText" />
+
+    <Button
+        android:id="@+id/fee2000Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee2000ButtonClick"
+        android:text="@string/button_2000"
+        app:layout_constraintBottom_toTopOf="@+id/fee5000Button"
+        app:layout_constraintEnd_toStartOf="@+id/fee3000Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fee500Button" />
+
+    <Button
+        android:id="@+id/fee3000Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee3000ButtonClick"
+        android:text="@string/button_3000"
+        app:layout_constraintBottom_toTopOf="@+id/fee100000Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fee2000Button"
+        app:layout_constraintTop_toBottomOf="@+id/fee1000Button" />
+
+    <Button
+        android:id="@+id/fee5000Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee5000ButtonClick"
+        android:text="@string/button_5000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fee100000Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fee2000Button" />
+
+    <Button
+        android:id="@+id/fee100000Button"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onFee10000ButtonClick"
+        android:text="@string/button_10000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fee5000Button"
+        app:layout_constraintTop_toBottomOf="@+id/fee3000Button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
