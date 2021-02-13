@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputLocationActivity">
+
+    <TextView
+        android:id="@+id/radiusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/radius_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/radius300mButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onRadius300mButtonClick"
+        android:singleLine="false"
+        android:text="@string/button_300m"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radius1000mButton"
+        app:layout_constraintEnd_toStartOf="@+id/radius500mButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiusText" />
+
+    <Button
+        android:id="@+id/radius500mButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onRadius500mButtonClick"
+        android:text="@string/button_500m"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radius2000mButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/radius300mButton"
+        app:layout_constraintTop_toBottomOf="@+id/radiusText" />
+
+    <Button
+        android:id="@+id/radius1000mButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onRadius1000mButtonClick"
+        android:text="@string/button_1000m"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radius3000mButton"
+        app:layout_constraintEnd_toStartOf="@+id/radius2000mButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radius300mButton" />
+
+    <Button
+        android:id="@+id/radius2000mButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onRadius2000mButtonClick"
+        android:text="@string/button_2000m"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radius3000mButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/radius1000mButton"
+        app:layout_constraintTop_toBottomOf="@+id/radius500mButton" />
+
+    <Button
+        android:id="@+id/radius3000mButton"
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:onClick="onRadius3000mButtonClick"
+        android:text="@string/button_3000m"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radius1000mButton"
+        app:layout_constraintTop_toBottomOf="@+id/radius1000mButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
