@@ -5,19 +5,30 @@
     android:id="@+id/textView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputLocationActivity">
+    tools:context=".inputSearchData.InputLocationActivity">
+
+    <ImageView
+        android:id="@+id/locationImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/location_imageText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
     <TextView
         android:id="@+id/radiusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="@string/radius_text"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/locationImageView" />
 
     <Button
         android:id="@+id/radius300mButton"
@@ -28,6 +39,7 @@
         android:text="@string/button_300m"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/radius1000mButton"
         app:layout_constraintEnd_toStartOf="@+id/radius500mButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,6 +54,7 @@
         android:text="@string/button_500m"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/radius2000mButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,6 +69,7 @@
         android:text="@string/button_1000m"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/radius3000mButton"
         app:layout_constraintEnd_toStartOf="@+id/radius2000mButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -70,6 +84,7 @@
         android:text="@string/button_2000m"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/radius3000mButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,7 +99,9 @@
         android:text="@string/button_3000m"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/radius1000mButton"
         app:layout_constraintTop_toBottomOf="@+id/radius1000mButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
