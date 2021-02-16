@@ -4,19 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputMealFeeActivity">
+    tools:context=".inputSearchData.InputMealFeeActivity">
+
+    <ImageView
+        android:id="@+id/moneyImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/money_imageText"
+        android:src="@drawable/ic_baseline_monetization_on_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/budgetText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="8dp"
         android:text="@string/budget_text"
-        android:textSize="24sp"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyImageView" />
 
     <Button
         android:id="@+id/fee500Button"
@@ -24,6 +36,7 @@
         android:layout_height="80dp"
         android:onClick="onFee500ButtonClick"
         android:text="@string/button_500"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/fee2000Button"
         app:layout_constraintEnd_toStartOf="@+id/fee1000Button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,6 +49,7 @@
         android:layout_height="80dp"
         android:onClick="onFee1000ButtonClick"
         android:text="@string/button_1000"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/fee3000Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,6 +62,7 @@
         android:layout_height="80dp"
         android:onClick="onFee2000ButtonClick"
         android:text="@string/button_2000"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/fee5000Button"
         app:layout_constraintEnd_toStartOf="@+id/fee3000Button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -60,6 +75,7 @@
         android:layout_height="80dp"
         android:onClick="onFee3000ButtonClick"
         android:text="@string/button_3000"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/fee100000Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -72,6 +88,7 @@
         android:layout_height="80dp"
         android:onClick="onFee5000ButtonClick"
         android:text="@string/button_5000"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fee100000Button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,11 +101,11 @@
         android:layout_height="80dp"
         android:onClick="onFee10000ButtonClick"
         android:text="@string/button_10000"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fee5000Button"
         app:layout_constraintTop_toBottomOf="@+id/fee3000Button" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
