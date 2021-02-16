@@ -4,32 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputKeyActivity">
+    tools:context=".inputSearchData.InputKeyActivity">
 
-    <EditText
-        android:id="@+id/apiKeyEditText"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="@string/apiKey_hint"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/apiKeyButton"
+    <ImageView
+        android:id="@+id/keyImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/key_imageText"
+        app:backgroundTint="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29000002" />
+        app:srcCompat="@drawable/ic_baseline_vpn_key_24" />
+
+    <TextView
+        android:id="@+id/apiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/api_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyImageView" />
+
+    <EditText
+        android:id="@+id/hotPepperApiEdit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/apiKey_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/yahooApiEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyImageView" />
+
+    <EditText
+        android:id="@+id/yahooApiEdit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/yahooApi_text"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/apiKeyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotPepperApiEdit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/tel_caution_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/yahooApiEdit"
+        app:layout_constraintTop_toBottomOf="@+id/yahooApiEdit" />
 
     <Button
         android:id="@+id/apiKeyButton"
-        android:layout_width="125dp"
+        android:layout_width="170dp"
         android:layout_height="60dp"
         android:onClick="onAPIKeyButtonClick"
         android:text="@string/apiKey_button"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/teal_700"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apiKeyEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/yahooApiEdit" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
