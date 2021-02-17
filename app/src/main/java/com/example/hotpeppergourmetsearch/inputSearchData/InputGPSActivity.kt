@@ -13,14 +13,17 @@ import com.example.hotpeppergourmetsearch.SearchResultActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
-// GPSを検索する検索条件入力画面
+/*
+    検索条件入力画面
+    GPSの検索を行う画面
+ */
 class InputGPSActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val SEARCH_DATA = "searchData"
     }
 
-    private lateinit var searchData: SearchData
+    private lateinit var searchData: SearchData     // 検索データ
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +34,7 @@ class InputGPSActivity : AppCompatActivity() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
-        // ACCESS_FINE_LOCATIONが許可されているかどうか
+        // ACCESS_FINE_LOCATIONを許可した場合
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -45,10 +48,12 @@ class InputGPSActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this@InputGPSActivity, permissions, 1000)
             return
         }
+
+        // GPSから位置情報を取得
         fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
             if (location != null) {
-                searchData.latitude = location.latitude
-                searchData.longitude = location.longitude
+                searchData.latitude = location.latitude     // 緯度を検索データに格納
+                searchData.longitude = location.longitude   // 経度を検索データに格納
                 screenTransition()
             }
         }
@@ -57,27 +62,32 @@ class InputGPSActivity : AppCompatActivity() {
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
-        grantResults: IntArray
+        grantResults: IntArray,
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if(requestCode == 1000 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        // パーミッションダイアログで許可を選択した場合
+        if (requestCode == 1000 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-            if(ActivityCompat.checkSelfPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.checkSelfPermission(applicationContext,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
                 return
             }
         }
+
+        // GPSから位置情報を取得
         fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
             if (location != null) {
-                searchData.latitude = location.latitude
-                searchData.longitude = location.longitude
+                searchData.latitude = location.latitude     // 緯度を検索データに格納
+                searchData.longitude = location.longitude   // 経度を検索データに格納
                 screenTransition()
             }
         }
     }
 
     // 検索結果画面へ画面遷移
-    private fun screenTransition(){
+    private fun screenTransition() {
         val intent = Intent(this, SearchResultActivity::class.java)
         intent.putExtra(SearchResultActivity.SEARCH_DATA, searchData)
         startActivity(intent)
