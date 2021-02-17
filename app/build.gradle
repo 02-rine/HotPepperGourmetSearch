@@ -79,23 +79,8 @@ dependencies {
     // Google service
     implementation 'com.google.android.gms:play-services-location:17.1.0'
 
-    // paging
-    implementation "android.arch.paging:runtime:1.0.1"
-
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-
-    // optional - RxJava2 support
-    implementation "androidx.paging:paging-rxjava2-ktx:3.0.0-beta01"
-
-    // optional - RxJava3 support
-    implementation "androidx.paging:paging-rxjava3:3.0.0-beta01"
-
-    // optional - Guava ListenableFuture support
-    implementation "androidx.paging:paging-guava:3.0.0-beta01"
-
-    // Jetpack Compose Integration
-    implementation "androidx.paging:paging-compose:1.0.0-alpha07"
 
     kapt "com.android.databinding:compiler:3.1.4"
     kaptAndroidTest 'androidx.databinding:databinding-compiler:4.1.2'
