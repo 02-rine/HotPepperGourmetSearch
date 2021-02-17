@@ -55,4 +55,4 @@ GPSの検索を行います。
 <br><img src="HotPepperGourmetSearch_Contents/RestaurantSearch_Detail_Image.jpg" width=30%>
 <br>
 <br>
-<br>＊各画面の詳細は「簡易仕様書」を拝見してください。
+<br>＊各画面の詳細は「簡易仕様書」をご覧ください。
