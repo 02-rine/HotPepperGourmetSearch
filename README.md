@@ -18,7 +18,9 @@
 <br>Yahoo!ローカルサーチAPI：https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/localsearch.html
 
 ## 使用動画
-APIキーの入力 → 予算の選択 → 検索範囲の選択 → リストから店舗の選択の順番で動作しています。
+APIキーの入力 ⇒ 予算の選択 ⇒ 検索範囲の選択 ⇒ リストから店舗の選択 ⇒　店舗詳細の順番で動作しています。
+<br>店舗詳細で表示される電話番号と魅力は、必ず表示されるわけではありません。
+<br>この使用動画では、2つ目の店舗詳細でのみ、電話番号と魅力が表示されています。
 <br>
 <br>'![result](HotPepperGourmetSearch_Contents/RestaurantSearch_Video.gif?raw=true)'
 
