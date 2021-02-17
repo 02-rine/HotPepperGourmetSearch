@@ -4,6 +4,10 @@
 - アーキテクチャパターン：MVVM（Model View ViewModel）
 - ライブラリ・API：DataBinding・LiveData・ViewModel・Coroutine・Retrofit2・Gson・RecyclerView・Glide
 
+## 概要
+予算と検索範囲を入力して、周辺のレストランを検索するアプリです。
+<br>子供から大人まで簡単に使えるアプリを目指しています。
+
 ## 不具合及び使用上の注意
 - GPSを予めONにした状態でアプリを起動しないと、GPS検索画面（InputGPSActivity）でスピナーが永続的に回り続けます。
 - ホットペッパーAPIとYahooAPIを使用するため、それぞれAPIキーが必要となります。ホットペッパーAPIのAPIキーは必須です。YahooAPIのAPIキーは必須ではなく、入力しない場合は電話番号が表示されません。
@@ -12,10 +16,6 @@
 使用したWebAPIを以下に示します。
 <br>ホットペッパーグルメサーチAPI：https://webservice.recruit.co.jp/doc/hotpepper/reference.html
 <br>Yahoo!ローカルサーチAPI：https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/localsearch.html
-
-## 概要
-予算と検索範囲を入力して、周辺のレストランを検索するアプリです。
-<br>子供から大人まで簡単に使えるアプリを目指しています。
 
 ## 使用動画
 APIキーの入力 → 予算の選択 → 検索範囲の選択 → リストから店舗の選択の順番で動作しています。
