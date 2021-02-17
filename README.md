@@ -30,11 +30,11 @@ APIキーの入力 ⇒ 予算の選択 ⇒ 検索範囲の選択 ⇒ リスト�
 <br><img src="HotPepperGourmetSearch_Contents/RestaurantSearch_Key_Image.jpg" width=30%>
 
 ### 2. 予算の選択
-6つのボタンから1つを選び、予算の選択を行います。
+6つのボタンから、予算の選択を行います。
 <br><img src="HotPepperGourmetSearch_Contents/RestaurantSearch_Fee_Image.jpg" width=30%>
 
 ### 3. 検索範囲の選択
-5つのボタンから1つを選び、検索範囲の選択を行います。
+5つのボタンから、検索範囲の選択を行います。
 <br><img src="HotPepperGourmetSearch_Contents/RestaurantSearch_Location_Image.jpg" width=30%>
 
 ### 4. GPSの検索
