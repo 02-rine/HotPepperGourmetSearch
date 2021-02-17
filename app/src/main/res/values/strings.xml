@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">HotPepperGourmetSearch</string>
+    <string name="app_name">サクッと!! レストラン検索</string>
+    <string name="budget_text">予算を選択してください</string>
+    <string name="button_1000">1001円～2000円</string>
+    <string name="button_2000">2001円～3000円</string>
+    <string name="button_3000">3001円～5000円</string>
+    <string name="button_5000">5001円～10000円</string>
+    <string name="button_500">501円～1000円</string>
+    <string name="button_10000">10001円～</string>
+    <string name="radius_text">検索半径を選択してください</string>
+    <string name="button_300m">～300m\n<font size="11">（東京ドーム6個分）</font></string>
+    <string name="button_500m">～500m\n<font size="11">（東京ドーム17個分）</font></string>
+    <string name="button_1000m">～1000m\n<font size="11">（東京ドーム70個分）</font></string>
+    <string name="button_2000m">～2000m\n<font size="11">（東京ドーム270個分）</font></string>
+    <string name="button_3000m">～3000m\n<font size="11">（東京ドーム600個分）</font></string>
+    <string name="apiKey_hint">ホットペッパーグルメAPIキーを入力してください</string>
+    <string name="apiKey_button">入力完了</string>
+    <string name="GPS_viewText">現在位置から検索中・・・</string>
+    <string name="yahooApi_text">Yahoo!APIキーの入力をしてください</string>
+    <string name="tel_caution_text">＊注意：入力しない場合、電話番号が表示されません</string>
+    <string name="api_text">APIキーを入力してください</string>
+    <string name="key_imageText">keyImageView</string>
+    <string name="money_imageText">moneyImageView</string>
+    <string name="location_imageText">locationImageView</string>
+    <string name="photoLarge_imageText">photoLargeImageView</string>
+    <string name="GPS_imageText">GPSImageView</string>
+    <string name="time_text">営業時間</string>
+    <string name="address_text">住所</string>
+    <string name="map_text">地図検索</string>
+    <string name="tel_text">電話番号</string>
+    <string name="genre_text">ジャンル</string>
+    <string name="catch_text">魅力</string>
+    <string name="budget_textView">予算</string>
+    <string name="station_text">最寄り駅</string>
+    <string name="error_api_text">APIキーが正しく入力されていません</string>
 </resources>
